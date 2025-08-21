@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int limite, n1, n2, final;
+    char sinal;
+
+    scanf("%d", &limite);
+    scanf("%d %c %d", &n1, &sinal, &n2);
+
+    if (sinal == 'x'){
+        final = n1 * n2;
+    } else {
+        final = n1 + n2;
+    }
+
+    if (final <= limite){
+        printf("no overflow\n");
+    } else {
+        printf("overflow\n");
+    }
+
+    return 0;
+}
