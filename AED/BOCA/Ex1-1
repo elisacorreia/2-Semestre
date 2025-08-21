@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main() {
+    int N, i, ano, anoHalley, bissexto, contaBissexto, resposta;
+    int P = 76;
+
+    scanf("%d", &N);
+
+    contaBissexto = 0;
+    anoHalley = 1986;
+
+    if (N >= anoHalley) {
+        bissexto = 1984;
+        for (i = 1986; (i < N); i = i + 4) {
+            ano = i;
+
+            if (((ano - 1986) % 76) == 0)
+                anoHalley = ano;
+            else
+                anoHalley = anoHalley;
+
+            if (((ano - bissexto) % 4) != 0)
+                contaBissexto += 1;
+            else
+                contaBissexto += 0;
+        }
+        resposta = anoHalley + P + (contaBissexto / 365);
+    } else {
+        bissexto = 1984;
+        for (i = 1986; (i > N); i = i - 4) {
+            ano = i;
+
+            if (((1986 - ano) % 76) == 0)
+                anoHalley = ano;
+            else
+                anoHalley = anoHalley;
+
+            if (((ano - bissexto) % 4) != 0)
+                contaBissexto += 1;
+            else
+                contaBissexto += 0;
+        }
+        resposta = anoHalley - (contaBissexto / 365);
+    }
+
+    printf("%d\n", resposta);
+    return 0;
+}
