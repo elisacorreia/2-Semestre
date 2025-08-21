@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int n1, n2, cent1, cent2, dez1, dez2, un1, un2, invertido1, invertido2;
+
+    scanf("%d %d", &n1, &n2);  
+
+    cent1 = n1 / 100;
+    cent2 = n2 / 100;
+
+    dez1 = (n1 / 10 ) % 10;
+    dez2 = (n2 / 10 ) % 10;
+
+    un1 = n1 % 10;
+    un2 = n2 % 10;
+
+    invertido1 = (un1 * 100) + (dez1 * 10) + cent1;
+    invertido2 = (un2 * 100) + (dez2 * 10) + cent2;
+
+    if (invertido1 >= invertido2) {
+        printf("%d\n", invertido1);
+    } else {
+        printf("%d\n", invertido2);
+    }
+
+    return 0;
+}
