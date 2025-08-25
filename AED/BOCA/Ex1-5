@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main(){
+    int N, x, i, l;
+
+    scanf("%d", &N);
+
+    for (i = 0; i < N; i++){
+        
+        char invertido[50];
+        int j = 0;
+
+        scanf("%d", &x); 
+        
+        if (x == 0) {
+            printf("A\n");
+            continue; 
+        }
+        
+        while (x > 0){
+            int resto = x % 4;
+            if (resto == 0){
+                invertido[j] = 'A';
+            } else if (resto == 1){
+                invertido[j] = 'C';
+            } else if (resto == 2){
+                invertido[j] = 'G';
+            } else {
+                invertido[j] = 'T';
+            }
+            j++;
+            x = x / 4;
+        }
+
+        for (l = j - 1; l >= 0; l--) {
+            printf("%c", invertido[l]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
