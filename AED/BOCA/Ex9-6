@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int N, i;
+    int eh_primo = 1; 
+
+    scanf("%d", &N);
+
+    if (N <= 1) {
+        eh_primo = 0;
+    } else {
+        for (i = 2; i <= N / i; i++) {
+            if (N % i == 0) {
+                eh_primo = 0; 
+                break;      
+            }
+        }
+    }
+    if (eh_primo == 1) {
+        printf("PRIMO\n");
+    } else {
+        printf("NAO PRIMO\n");
+    }
+
+    return 0;
+}
