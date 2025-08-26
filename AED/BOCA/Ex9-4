@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+
+    int valor_inicial, razao, n, An, soma;
+    An = 0;
+
+    scanf("%d %d %d", &valor_inicial, &razao, &n);
+
+    An = valor_inicial + (n - 1) * razao;
+
+    soma = (valor_inicial + An) * n / 2;
+     
+    printf("%d\n", &soma);
+
+    return 0;
+}
