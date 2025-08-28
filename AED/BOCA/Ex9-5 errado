@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main() {
+    float n, i, s, B;
+    float soma, subtracao, multiplicacao, divisao;
+    int a, b, c, d, K;
+
+    scanf("%f", &n);
+    scanf("%f", &i);
+    scanf("%d", &K);
+    scanf("%f", &s);
+
+    printf("Tabuada de soma:\n");
+    B = i;
+    for (a = 0; a < K; a++) {
+        soma = n + B;
+        printf("%.2f + %.2f = %.2f\n", n, B, soma);
+        B += s;
+    }
+
+    printf("Tabuada de subtracao:\n");
+    B = i; 
+    for (b = 0; b < K; b++) {
+        subtracao = n - B;
+        printf("%.2f - %.2f = %.2f\n", n, B, subtracao);
+        B += s;
+    }
+
+    printf("Tabuada de multiplicacao:\n");
+    B = i; 
+    for (c = 0; c < K; c++) {
+        multiplicacao = n * B;
+        printf("%.2f * %.2f = %.2f\n", n, B, multiplicacao);
+        B += s;
+    }
+
+    printf("Tabuada de divisao:\n");
+    B = i;
+    for (d = 0; d < K; d++) {
+        divisao = n / B;
+        printf("%.2f / %.2f = %.2f\n", n, B, divisao);
+        B += s;
+    }
+
+    return 0;
+}
