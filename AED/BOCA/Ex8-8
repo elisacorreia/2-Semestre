@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main(){
+
+    double massa, aceleracao, tempo;
+    double velocidade, trabalho, espaco;
+
+    scanf("%lf", &massa);
+    scanf("%lf", &aceleracao);
+    scanf("%lf", &tempo);
+
+    velocidade = (aceleracao * tempo) * 3.6;
+    espaco = (aceleracao * tempo * tempo) / 2;
+    trabalho = (massa * 1000) * ((velocidade / 3.6) * (velocidade / 3.6)) / 2;
+    
+    printf("VELOCIDADE = %.2lf\nESPACO PERCORRIDO = %.2lf\nTRABALHO REALIZADO = %.2lf\n", velocidade, espaco, trabalho);
+
+    return 0;
+}
