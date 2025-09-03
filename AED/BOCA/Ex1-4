@@ -7,6 +7,7 @@ int main(){
 
     for (i = 0; i < x; i++){
         scanf("%d", &N);
+        if (N >= 1000){
 
         milhar = N / 1000;
         centena = (N / 100) - (milhar * 10);
@@ -22,6 +23,41 @@ int main(){
         }
         if (i < x - 1) {
             printf(" ");
+        }} else if (N >= 100){
+
+        centena = (N / 100);
+        dezena = (N / 10 ) - (centena * 10);
+        unidade = N - (centena * 100) - (dezena * 10);
+
+        invertido = (unidade * 100) + (dezena * 10) + centena;
+
+        if (invertido == N){
+            printf("yes");
+        } else {
+            printf("no");
+        }
+        if (i < x - 1) {
+            printf(" ");
+        }
+        } else if (N >= 10) {
+        dezena = (N / 10 );
+        unidade = N - dezena;
+
+        invertido = (unidade * 10) + dezena;
+
+        if (invertido == N){
+            printf("yes");
+        } else {
+            printf("no");
+        }
+        if (i < x - 1) {
+            printf(" ");
+        }
+        } else {
+            printf("yes");
+        if (i < x - 1) {
+            printf(" ");
+        }
         }
     }
     printf("\n");
