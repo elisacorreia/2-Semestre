@@ -20,6 +20,9 @@ int main(){
         } else {
             printf("no");
         }
+        if (i < x - 1) {
+            printf(" ");
+        }
     }
     printf("\n");
     
